@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Linux+Hexo+yilia主题--个人博客搭建 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="学习代码找工作，建立自己的个人博客既是对自己学习过程成果的记录，也算一项项目经历，因此搭建了这个博客站。感谢up主CodeSheep和各位网友经验的教导，在这里对整个搭建过程进行一下总结。"><meta property="og:type" content="blog"><meta property="og:title" content="Linux+Hexo+yilia主题--个人博客搭建"><meta property="og:url" content="http://example.com/2022/03/04/Linux-Hexo-yilia%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="学习代码找工作，建立自己的个人博客既是对自己学习过程成果的记录，也算一项项目经历，因此搭建了这个博客站。感谢up主CodeSheep和各位网友经验的教导，在这里对整个搭建过程进行一下总结。"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/images/huli.jpg"><meta property="og:image" content="c:/Users/26816/AppData/Roaming/Typora/typora-user-images/image-20220304212359782.png"><meta property="article:published_time" content="2022-03-04T08:53:56.000Z"><meta property="article:modified_time" content="2022-03-05T08:54:04.446Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="Hexo"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/images/huli.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/04/Linux-Hexo-yilia%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"},"headline":"Linux+Hexo+yilia主题--个人博客搭建","image":["http://example.com/images/huli.jpg","c:/Users/26816/AppData/Roaming/Typora/typora-user-images/image-20220304212359782.png"],"datePublished":"2022-03-04T08:53:56.000Z","dateModified":"2022-03-05T08:54:04.446Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"学习代码找工作，建立自己的个人博客既是对自己学习过程成果的记录，也算一项项目经历，因此搭建了这个博客站。感谢up主CodeSheep和各位网友经验的教导，在这里对整个搭建过程进行一下总结。"}</script><link rel="canonical" href="http://example.com/2022/03/04/Linux-Hexo-yilia%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">目录</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-04T08:53:56.000Z" title="2022/3/4 下午4:53:56">2022-03-04</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-05T08:54:04.446Z" title="2022/3/5 下午4:54:04">2022-03-05</time></span><span class="level-item">12 minutes read (About 1818 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Linux+Hexo+yilia主题--个人博客搭建</h1><div class="content"><p><img src="/images/huli.jpg" alt="帅气的狐狸"></p>
+<p>学习代码找工作，建立自己的个人博客既是对自己学习过程成果的记录，也算一项项目经历，因此搭建了这个博客站。感谢up主CodeSheep和各位网友经验的教导，在这里对整个搭建过程进行一下总结。</p>
+<hr>
+<span id="more"></span>
+
+<h2 id="1-Linux环境搭建"><a href="#1-Linux环境搭建" class="headerlink" title="1. Linux环境搭建"></a>1. Linux环境搭建</h2><p>服务器相关信息：</p>
+<ul>
+<li>来源：阿里云</li>
+<li>版本：Ubuntu 18.04.6</li>
+<li>相关工具：Putty、WinSCP</li>
+</ul>
+<h3 id="1-1-安装和配置node-js"><a href="#1-1-安装和配置node-js" class="headerlink" title="1.1 安装和配置node.js"></a>1.1 安装和配置node.js</h3><p>安装方法：</p>
+<ul>
+<li><p>1、官网下载适合linux–Linux二进制文件（x64）（链接：<a target="_blank" rel="noopener" href="http://nodejs.cn/download/%EF%BC%89%E3%80%82">http://nodejs.cn/download/）。</a></p>
+<p>&#x3D;&#x3D;uname -a&#x3D;&#x3D;命令可以获得linux系统位数。</p>
+</li>
+<li><p>2、下载得到 &#x3D;&#x3D;node-v16.14.0-linux-x64.tar.xz&#x3D;&#x3D; 压缩包，使用WinSCP上传至服务器任意目录，使用tar命令解压即安装完成。</p>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf node-v16.14.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>​    （为了之后方便，把解压后的文件夹名改为nodejs）</p>
+<ul>
+<li>3、建立&#x3D;&#x3D;软链接&#x3D;&#x3D;，使npm、node命令可用，使用&#x3D;&#x3D;ln -s&#x3D;&#x3D;命令。</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /root/programs/nodejs/bin/npm /bin/</span><br><span class="line"><span class="built_in">ln</span> -s /root/programs/nodejs/bin/node /bin/</span><br><span class="line"><span class="comment"># ln -s 源文件路径（必须为绝对路径，从根目录/写起） 软链接位置路径（设置为系统bin目录，使得npm和node可以运行）</span></span><br></pre></td></tr></table></figure>
+
+<p>​    建立完成后可以使用 node -v和npm -v指令检验软连接是否建立成功</p>
+<p>（tips：后面还需用到git，但服务器本身已经默认装过了，所以不需要装，有需要可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37908043/article/details/89065586?spm=1001.2014.3001.5502%EF%BC%89">https://blog.csdn.net/qq_37908043/article/details/89065586?spm=1001.2014.3001.5502）</a></p>
+<h3 id="1-2-安装和初始化hexo"><a href="#1-2-安装和初始化hexo" class="headerlink" title="1.2 安装和初始化hexo"></a>1.2 安装和初始化hexo</h3><ul>
+<li>1、安装：可以直接使用&#x3D;&#x3D;npm install&#x3D;&#x3D;命令安装</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>​    若太慢，可以用淘宝源：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	<span class="comment">#安装淘宝的cnpm 管理器</span></span><br><span class="line">cnpm -v	<span class="comment">#查看cnpm版本</span></span><br><span class="line">cnpm install -g hexo-cli    <span class="comment">#安装hexo框架</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2、建立软连接：使hexo命令可用，hexo在nodejs中的路径为&#x3D;&#x3D;nodejs&#x2F;lib&#x2F;node_modules&#x2F;hexo-cli&#x2F;bin&#x2F;hexo&#x3D;&#x3D;，完成后可以用hexo -v指令检验</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /root/programs/nodejs/lib/node_modules/hexo-cli/bin/hexo /bin/hexo</span><br></pre></td></tr></table></figure>
+
+<p> (这里后面只链接bin就不行了，不知道啥情况，链接到&#x2F;bin&#x2F;hexo就可以 -_-! )</p>
+<ul>
+<li>3、在合适的位置建立blog文件夹，之后的操作都在这里，然后进入该目录，指令如下</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>4、hexo初始化，使用&#x3D;&#x3D;hexo init&#x3D;&#x3D;命令，会在blog文件夹下生成hexo框架所需的文件和目录，hexo常用命令如下，更多内容可参考官方文档<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/%EF%BC%9A">https://hexo.io/zh-cn/docs/：</a></li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init 	<span class="comment">#生成博客 初始化博客</span></span><br><span class="line">hexo s	<span class="comment">#启动本地博客服务</span></span><br><span class="line">hexo n &lt;title&gt; <span class="comment">#生成新文章</span></span><br><span class="line">hexo c	<span class="comment">#清理一下</span></span><br><span class="line">hexo g	<span class="comment">#生成</span></span><br><span class="line">hexo d	<span class="comment">#部署到远程Github仓库</span></span><br></pre></td></tr></table></figure>
+
+<p>init完成后，可以使用&#x3D;&#x3D;hexo s&#x3D;&#x3D; 命令运行，提示成功运行在http：localhost：4000即表明运行成功。</p>
+<ul>
+<li><p>5、tips：</p>
+<p>Linux关于进程操作的一些指令，可以在未正常关闭hexo进程时解决4000端口占用问题。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps <span class="comment">#显示正在运行的进程相关信息</span></span><br><span class="line"><span class="built_in">jobs</span> <span class="comment">#当前会话再进行的工作</span></span><br><span class="line"><span class="built_in">fg</span> <span class="comment">#将后台的命令调至前台进行</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="1-3-浏览器访问"><a href="#1-3-浏览器访问" class="headerlink" title="1.3 浏览器访问"></a>1.3 浏览器访问</h3><ul>
+<li><p>1、云服务器安全组设置，配置安全组规则，开放4000端口的TCP连接。</p>
+</li>
+<li><p>2、浏览器输入：http：&lt;域名&gt; or &lt;ip地址&gt;:4000，即可访问。</p>
+</li>
+</ul>
+<h2 id="2、主题更换和相关修改"><a href="#2、主题更换和相关修改" class="headerlink" title="2、主题更换和相关修改"></a>2、主题更换和相关修改</h2><h3 id="2-1-yilia主题更换"><a href="#2-1-yilia主题更换" class="headerlink" title="2.1 yilia主题更换"></a>2.1 yilia主题更换</h3><p>同样在blog文件夹下进行操作。</p>
+<ul>
+<li>1、从github上下载源码，使用&#x3D;&#x3D;git clone&#x3D;&#x3D;指令。</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p>​    下载完成后，文件夹路径为&#x3D;&#x3D;blog&#x2F;themes&#x2F;yilia&#x3D;&#x3D;。</p>
+<ul>
+<li><p>2、修改根目录（blog）下配置文件_config.yml，以替换默认主题。</p>
+<p>可以使用vim打开文件，vim具体使用方法可以浏览菜鸟教程（<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-tutorial.html%EF%BC%89%E3%80%82">https://www.runoob.com/linux/linux-tutorial.html）。</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br><span class="line"><span class="comment">#按i进入编辑模式</span></span><br><span class="line"><span class="comment">#找到theme（一般在最下面），将后面的landscape改为yilia</span></span><br><span class="line"><span class="comment">#esc，然后使用冒号指令wq保存退出</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\26816\AppData\Roaming\Typora\typora-user-images\image-20220304212359782.png" alt="image-20220304212359782"></p>
+</li>
+<li><p>3、修改完成后重新启动hexo，并通过浏览器访问查看。</p>
+</li>
+</ul>
+<h3 id="2-2-yilia相关个性化修改"><a href="#2-2-yilia相关个性化修改" class="headerlink" title="2.2 yilia相关个性化修改"></a>2.2 yilia相关个性化修改</h3><p><em>（可以查看yilia给出的教程完成初步修改）</em></p>
+<ul>
+<li><p>1、安装缺失组件。（修正全部文章无法显示等问题）</p>
+<p><em>同样在blog目录下进行</em></p>
+<p>首先运行以下命令，安装相关程序。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i  hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
+
+<p>再修改blog目录下的_config.yml文件，在空位添加以下代码：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">    meta: <span class="literal">false</span></span><br><span class="line">    pages: <span class="literal">false</span></span><br><span class="line">    posts:</span><br><span class="line">      title: <span class="literal">true</span></span><br><span class="line">      <span class="built_in">date</span>: <span class="literal">true</span></span><br><span class="line">      path: <span class="literal">true</span></span><br><span class="line">      text: <span class="literal">true</span></span><br><span class="line">      raw: <span class="literal">false</span></span><br><span class="line">      content: <span class="literal">false</span></span><br><span class="line">      slug: <span class="literal">false</span></span><br><span class="line">      updated: <span class="literal">false</span></span><br><span class="line">      comments: <span class="literal">false</span></span><br><span class="line">      <span class="built_in">link</span>: <span class="literal">false</span></span><br><span class="line">      permalink: <span class="literal">false</span></span><br><span class="line">      excerpt: <span class="literal">false</span></span><br><span class="line">      categories: <span class="literal">true</span></span><br><span class="line">      tags: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2、更换头像。</p>
+<p>需要修改yilia文件夹中的_config.yml配置文件，将你要修改的头像放在source&#x2F;img&#x2F;目录下，然后将avatar后的url改成&#x2F;img&#x2F;你的头像名.jpg，具体如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#你的头像url</span></span><br><span class="line">avatar: /img/head.jpg</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3、文章内容相关。</p>
+<ul>
+<li><p>（1）如果是在本地编辑的md文件，直接传上去，没有自动生成的标题和时间等信息，在md文件顶端加上以下内容即可：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标题</span><br><span class="line"><span class="built_in">date</span>: 2022-02-22</span><br><span class="line">tags: Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>（2）内容截断，要让首页不显示全部文章内容需要进行文章截断，只需要在需截断处加上more标志即可。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>（3）插入图片。实现这个的时候踩的坑比较多，主要是建站是hexo版本为5.4，与以前的不相符，官方提供的方式也并不好用，其实hexo5版本以后图片插入比较方便，下面说正确姿势。</p>
+<p>首先要更改blog目录下的_config.yml文件，将post_asset_folder属性改为true，然后在 &#x3D;&#x3D;&#x2F;blog&#x2F;source&#x2F;&#x3D;&#x3D;文件夹下建立专门放图片的文件夹（<em>如&#x2F;images</em>），然后将图片传进去，之后在md文件中插入图片时将路径改好即可，具体插入方式如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](/images/图片名)</span><br><span class="line"><span class="comment">#当然在images文件夹下建立多级文件夹也是可以的，只要路径写对即可。</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="3、待解决的问题"><a href="#3、待解决的问题" class="headerlink" title="3、待解决的问题"></a>3、待解决的问题</h2><ul>
+<li><p>1、md文件、图片路径和图片自动更改和上传的问题。</p>
+<p>（使用WinSCP的自动同步功能可以解决）</p>
+</li>
+<li><p>2、域名问题。（买一个就行了，不是啥问题）。</p>
+</li>
+<li><p>3、进站需要输入端口号问题，解决思路80端口或者a代理。</p>
+</li>
+</ul>
+<h2 id="4、-参考"><a href="#4、-参考" class="headerlink" title="4、 参考"></a>4、 参考</h2><p>CodeSheep教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<p>yilia主题相关：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f6f19b02c661">https://www.jianshu.com/p/f6f19b02c661</a></p>
+<p>Linux安装Hexo：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37908043/article/details/89066858?spm=1001.2014.3001.5502">https://blog.csdn.net/qq_37908043/article/details/89066858?spm=1001.2014.3001.5502</a></p>
+<p>Linux停止进程教程：<a target="_blank" rel="noopener" href="https://www.linuxprobe.com/linux-kill-process.html">https://www.linuxprobe.com/linux-kill-process.html</a></p>
+<p>Linux菜鸟教程：<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-tutorial.html">https://www.runoob.com/linux/linux-tutorial.html</a></p>
+<p>网友的个人总结：<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12633102">https://www.bilibili.com/read/cv12633102</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Linux+Hexo+yilia主题--个人博客搭建</p><p><a href="http://example.com/2022/03/04/Linux-Hexo-yilia个人博客搭建/">http://example.com/2022/03/04/Linux-Hexo-yilia个人博客搭建/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>John Doe</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-03-04</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-05</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Hexo/">Hexo</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/20/koa/"><span class="level-item">Koa基础学习笔记</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/head.jpg" alt="小明"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">小明</p><p class="is-size-6 is-block">认真写代码！</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Xiaoming4249" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Xiaoming4249"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-04T08:53:56.000Z">2022-03-04</time></p><p class="title"><a href="/2022/03/04/Linux-Hexo-yilia%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Linux+Hexo+yilia主题--个人博客搭建</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-19T16:00:00.000Z">2021-10-20</time></p><p class="title"><a href="/2021/10/20/koa/">Koa基础学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-07T16:00:00.000Z">2021-10-08</time></p><p class="title"><a href="/2021/10/08/Java_1_%E5%AE%B9%E5%99%A8%E4%BE%8B%E7%A8%8B_%E5%9F%8E%E5%B8%82%E9%87%8C%E7%A8%8B/">Java学习--1--容器例程-城市里程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-05T16:00:00.000Z">2021-10-06</time></p><p class="title"><a href="/2021/10/06/Java_1_%E7%BB%A7%E7%BB%AD%E5%85%A5%E9%97%A8/">Java学习--1--面向对象</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-30T16:00:00.000Z">2021-10-01</time></p><p class="title"><a href="/2021/10/01/Java_0_%E5%85%A5%E9%97%A8/">Java学习笔记-0-入门</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">October 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/1900/01/"><span class="level-start"><span class="level-item">January 1900</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Koa/"><span class="tag">Koa</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/muban/"><span class="tag">muban</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

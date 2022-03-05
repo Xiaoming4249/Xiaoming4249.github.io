@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Java学习--1--面向对象 - Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Hexo"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Java类与对象的相关内容，还包括常用的数据容器介绍。"><meta property="og:type" content="blog"><meta property="og:title" content="Java学习--1--面向对象"><meta property="og:url" content="http://example.com/2021/10/06/Java_1_%E7%BB%A7%E7%BB%AD%E5%85%A5%E9%97%A8/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="Java类与对象的相关内容，还包括常用的数据容器介绍。"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/%5Cimage-20210922110156019.png"><meta property="article:published_time" content="2021-10-05T16:00:00.000Z"><meta property="article:modified_time" content="2022-03-05T08:52:53.298Z"><meta property="article:author" content="John Doe"><meta property="article:tag" content="Java"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/%5Cimage-20210922110156019.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/10/06/Java_1_%E7%BB%A7%E7%BB%AD%E5%85%A5%E9%97%A8/"},"headline":"Java学习--1--面向对象","image":["http://example.com/%5Cimage-20210922110156019.png"],"datePublished":"2021-10-05T16:00:00.000Z","dateModified":"2022-03-05T08:52:53.298Z","author":{"@type":"Person","name":"John Doe"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"Java类与对象的相关内容，还包括常用的数据容器介绍。"}</script><link rel="canonical" href="http://example.com/2021/10/06/Java_1_%E7%BB%A7%E7%BB%AD%E5%85%A5%E9%97%A8/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">目录</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-10-05T16:00:00.000Z" title="2021/10/6 上午12:00:00">2021-10-06</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-05T08:52:53.298Z" title="2022/3/5 下午4:52:53">2022-03-05</time></span><span class="level-item">15 minutes read (About 2235 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Java学习--1--面向对象</h1><div class="content"><p>Java类与对象的相关内容，还包括常用的数据容器介绍。</p>
+<span id="more"></span>
+
+<h2 id="1、类与对象"><a href="#1、类与对象" class="headerlink" title="1、类与对象"></a>1、类与对象</h2><p>&#x3D;&#x3D;对象&#x3D;&#x3D;：<strong>实体</strong>，需要被创建，为我们做事；</p>
+<p>​            对象 &#x3D;属性（数据，成员变量）+服务（操作，成员函数）</p>
+<p>​            &#x3D;&#x3D;封装&#x3D;&#x3D;：把数据和对数据的操作放在一起。（对象内的数据只能通过对象的操作来访问）</p>
+<p>&#x3D;&#x3D;类&#x3D;&#x3D;：<strong>规范</strong>，根据类的定义创建对象。</p>
+<h3 id="1-1定义类和建立对象"><a href="#1-1定义类和建立对象" class="headerlink" title="1.1定义类和建立对象"></a>1.1定义类和建立对象</h3><p><strong>内容：</strong>成员变量+成员函数</p>
+<p><em>例1（定义类）</em>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//售货机</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">VendingMachine</span>&#123;</span><br><span class="line">    <span class="comment">//变量</span></span><br><span class="line">    <span class="type">int</span> price;</span><br><span class="line">    <span class="type">int</span> balabnce;</span><br><span class="line">    <span class="type">int</span> total;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//函数</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">insertMoney</span><span class="params">(<span class="type">int</span> amount)</span><span class="comment">//投钱</span></span><br><span class="line">    &#123;</span><br><span class="line">        balance = balance + amount;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">showBalance</span><span class="params">()</span><span class="comment">//显示余额</span></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(balance);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>例2（创建对象）</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">VendingMachine</span> <span class="variable">v1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">VendingMachine</span>();</span><br></pre></td></tr></table></figure>
+
+<p><em>例3（调用操作）</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//&quot;.&quot;运算符</span></span><br><span class="line">v1.showBalance();</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;在类内部,成员函数可直接调用成员变量和成员函数，有时可用”this.”节省打字时间&#x3D;&#x3D;</p>
+<p><strong>本地变量：</strong>函数内部定义的变量，生存期和作用域都是函数内部</p>
+<h3 id="1-2对象初始化"><a href="#1-2对象初始化" class="headerlink" title="1.2对象初始化"></a>1.2对象初始化</h3><h4 id="1、成员变量初始化"><a href="#1、成员变量初始化" class="headerlink" title="1、成员变量初始化"></a>1、成员变量初始化</h4><p>定义类时给初值 or 建立对象时自动赋初值</p>
+<h4 id="2、构造函数"><a href="#2、构造函数" class="headerlink" title="2、构造函数"></a>2、构造函数</h4><p>类内名称和类名相同的函数，对象初始化时会被调用，可以有输入参数，但不能有返回值。</p>
+<p><em>例</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">VendingMachine()</span><br><span class="line">&#123;</span><br><span class="line">    price = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">VendingMachine(<span class="type">int</span> price)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">this</span>.price = price;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x3D;&#x3D;一个类中可以定义多个构造函数，对象初始化时根据输入参数调用对应的构造函数&#x3D;&#x3D;</p>
+</li>
+<li><p>&#x3D;&#x3D;构造函数内也可以调用其他构造函数&#x3D;&#x3D;</p>
+</li>
+</ul>
+<h2 id="2、对象交互"><a href="#2、对象交互" class="headerlink" title="2、对象交互"></a>2、对象交互</h2><h3 id="2-1-对象识别与划分"><a href="#2-1-对象识别与划分" class="headerlink" title="2.1 对象识别与划分"></a>2.1 对象识别与划分</h3><p><em>原则：</em>属性和动作相似统一的可以视为同一类对象。</p>
+<p><em>例：</em>一个时钟可以看做小时和分钟两个同类型的计数器对象。</p>
+<h3 id="2-2-访问属性"><a href="#2-2-访问属性" class="headerlink" title="2.2 访问属性"></a>2.2 访问属性</h3><h4 id="（一）封闭的访问属性“private”"><a href="#（一）封闭的访问属性“private”" class="headerlink" title="（一）封闭的访问属性“private”"></a>（一）封闭的访问属性“private”</h4><ul>
+<li>“private” 关键字，可用于成员变量和成员函数前</li>
+<li>封闭属性成员只能被内部&#x3D;&#x3D;成员函数&#x3D;&#x3D;或&#x3D;&#x3D;成员变量初始化&#x3D;&#x3D;调用</li>
+<li>&#x3D;&#x3D;问题讨论&#x3D;&#x3D;：private的“封闭”针对的是类，而不是某一个对象，因此同一类的不同对象之间可以互相调用封闭类型变量。</li>
+</ul>
+<h4 id="（二）开放的访问属性“public”"><a href="#（二）开放的访问属性“public”" class="headerlink" title="（二）开放的访问属性“public”"></a>（二）开放的访问属性“public”</h4><ul>
+<li>可被任意函数调用</li>
+<li>类也可以被定义为“public”属性，但一个编译单元（源文件）中只能有&#x3D;&#x3D;一个&#x3D;&#x3D;public类型的类，且&#x3D;&#x3D;类的名称必须和源文件名称相同&#x3D;&#x3D;。</li>
+</ul>
+<h4 id="（三）半开放属性“friendly”"><a href="#（三）半开放属性“friendly”" class="headerlink" title="（三）半开放属性“friendly”"></a>（三）半开放属性“friendly”</h4><ul>
+<li>定义变量和函数时没有加“private”或“public”即为该类型</li>
+<li>该类变量和函数可被同一包内的其它函数调用</li>
+</ul>
+<h3 id="2-3-包-package"><a href="#2-3-包-package" class="headerlink" title="2.3 包(package)"></a>2.3 包(package)</h3><ul>
+<li>包名—&gt;文件夹名</li>
+<li>包间调用需要使用import</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> package_name.class_name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-类变量“static”"><a href="#2-4-类变量“static”" class="headerlink" title="2.4 类变量“static”"></a>2.4 类变量“static”</h3><p><em>类变量</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">classVarity</span> <span class="operator">=</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特点</strong>：</p>
+<ul>
+<li>可以用 类名.类变量  or 对象名.类变量  的方式访问和赋值</li>
+<li>同一类的对象中类变量的值都是相同的（对一个对象中的类变量赋值，同一类中其他对象中该值也会改变）</li>
+<li>类变量的初始化只会进行一次</li>
+</ul>
+<p><em>类函数</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">f</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//content of function</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>特点：</strong></p>
+<ul>
+<li>函数内只能调用类变量和类函数</li>
+<li>可以用 类名.类函数名 or 对象名.类函数名  的方式调用</li>
+</ul>
+<h2 id="3、对象容器"><a href="#3、对象容器" class="headerlink" title="3、对象容器"></a>3、对象容器</h2><h3 id="3-1定义"><a href="#3-1定义" class="headerlink" title="3.1定义"></a>3.1定义</h3><p>&#x3D;&#x3D;<strong>容器类</strong>&#x3D;&#x3D;：</p>
+<ul>
+<li>两个类型：<ul>
+<li>容器的类型</li>
+<li>元素的类型</li>
+</ul>
+</li>
+</ul>
+<p><em>例：</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; notes = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;;</span><br><span class="line"><span class="comment">//元素类型为字符串的ArrayList容器</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;<strong>对象数组</strong>&#x3D;&#x3D;：</p>
+<p><em>例</em>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//String数组</span></span><br><span class="line">String[] s = <span class="keyword">new</span> <span class="title class_">String</span>[array_size];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当数组的元素的类型是类的时候，数组的每一个元素其实只是对象的管理者而不是对象本身。</li>
+<li>对象数组的for each操作</li>
+</ul>
+<p><em>例：</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String[] str = <span class="keyword">new</span> <span class="title class_">String</span>[array_size];</span><br><span class="line"><span class="keyword">for</span>(String s : str)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//对str字符串数组中的字符串进行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-集合容器"><a href="#3-2-集合容器" class="headerlink" title="3.2 集合容器"></a>3.2 集合容器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HashSet&lt;String&gt; notes = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;String&gt;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>集合中的元素没有顺序</li>
+<li>元素不能重复</li>
+</ul>
+<p>&#x3D;&#x3D;<strong>public String toString(){return “”+varity_class;}</strong>&#x3D;&#x3D;</p>
+<ul>
+<li><ul>
+<li>当一个类中有上述函数时，可直接用 &#x3D;&#x3D;System.out.println(该类对象)&#x3D;&#x3D;输出return后的值（转化为字符串）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-Hash-散列表"><a href="#3-3-Hash-散列表" class="headerlink" title="3.3 Hash 散列表"></a>3.3 Hash 散列表</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;Interger, String&gt; coinname = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Interger, String&gt;;</span><br><span class="line"><span class="comment">//放值</span></span><br><span class="line">coinname.put(<span class="number">1</span>,<span class="string">&quot;penny&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Hash内元素为键值对</li>
+<li>键是唯一的</li>
+<li>定义时尖括号内必须为包裹类型</li>
+</ul>
+<p>&#x3D;&#x3D;遍历方法：&#x3D;&#x3D;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(Integer k : coinname.keySet())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> coinname.get(k);</span><br><span class="line">    <span class="comment">//对s操作</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//思路：遍历键，由键及值</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4、继承与多态"><a href="#4、继承与多态" class="headerlink" title="4、继承与多态"></a>4、继承与多态</h2><h3 id="4-1-父类和子类"><a href="#4-1-父类和子类" class="headerlink" title="4.1 父类和子类"></a>4.1 父类和子类</h3><p>&#x3D;&#x3D;使用场景：&#x3D;&#x3D;在一个工程中有两个或多个内容相似、相近的类，可使用父类表达，以减少代码复制，提高代码质量和可维护性</p>
+<ul>
+<li>建立子类：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DVD</span> <span class="keyword">extends</span> <span class="title class_">Item</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//private String title;//在父类中进行定义</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> playtime;</span><br><span class="line">    <span class="keyword">private</span> String title;<span class="comment">//当父类和子类中有同名变量，会发生什么？（看下面）</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DVD</span><span class="params">(String title, <span class="type">int</span> playtime)</span>&#123;</span><br><span class="line">        <span class="comment">//this.title = title;</span></span><br><span class="line">        supper(title);<span class="comment">//调用父类中参数为一个字符串的构造器，即将title传递给父类构造器</span></span><br><span class="line">        <span class="built_in">this</span>.playtime = playtime;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对应父类：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Item</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String title;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Item</span><span class="params">(String title)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>();</span><br><span class="line">        <span class="built_in">this</span>.title = title;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">print</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>主函数内容：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-继承"><a href="#4-2-继承" class="headerlink" title="4.2 继承"></a>4.2 继承</h3><ul>
+<li><p>&#x3D;&#x3D;<em>DVD</em>是<em>Item</em>的子类&#x3D;&#x3D;</p>
+<p>可以继承父类中的变量和函数</p>
+<ul>
+<li>不能使用private类型</li>
+<li>可设置变量或函数为protected类型，则子类可调用</li>
+<li>也可用super（）函数进行参数传递</li>
+</ul>
+</li>
+<li><p>&#x3D;&#x3D;super()函数和参数传递&#x3D;&#x3D;</p>
+<ul>
+<li>可将子类构造函数的参数传递到父类的构造函数</li>
+<li>程序流程：new Item(一堆参数) –跳转到DVD构造——-&gt;DVD()–运行到super（）——-&gt;super()–super的意思就是调用Item中的构造函数-&gt;Item()—&gt;DVD()</li>
+<li>当子类构造函数中没有写super()时，默认自动存在不含参数的super（）（会去调用父类无参数构造器）</li>
+</ul>
+</li>
+<li><p>&#x3D;&#x3D;父类子类同名参数&#x3D;&#x3D;</p>
+<ul>
+<li>子类中调用该变量时，父类中的会被隐藏（就近原则）</li>
+<li>父类中调用时使用的依然是父类中的变量</li>
+</ul>
+</li>
+<li><p>&#x3D;&#x3D;父类子类同名函数&#x3D;&#x3D;</p>
+<ul>
+<li>子类中调用父类同名函数使用super.funname()</li>
+</ul>
+</li>
+<li><p>&#x3D;&#x3D;<strong>总结</strong>：&#x3D;&#x3D;</p>
+<ul>
+<li>类定义了类型</li>
+<li>子类定义了子类型</li>
+<li>子类的对象可以被当作父类的对象来使用</li>
+<li>赋值给父类的变量</li>
+<li>传递给需要父类对象的函数</li>
+<li>放进存放父类对象的容器</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-多态变量"><a href="#4-3-多态变量" class="headerlink" title="4.3 多态变量"></a>4.3 多态变量</h3><ul>
+<li><p><strong>内涵</strong>：</p>
+<ul>
+<li>java的对象变量（父类对象）是多态的，它们能保存不止一种类型的对象</li>
+<li>它们可以保存声明类型的对象，或声明类型的子类的对象</li>
+<li>当把子类的对象赋给父类的变量的时候，就发生了向上造型</li>
+</ul>
+</li>
+<li><p><strong>向上造型：</strong></p>
+<ul>
+<li>子类的对象可以赋值给父类的变量</li>
+<li>父类的对象不能赋值给子类的变量</li>
+<li>可以用造型</li>
+<li>&#x3D;&#x3D;造型与类型转换&#x3D;&#x3D;<ul>
+<li>造型时对象不发生改变（管理者改变）</li>
+<li>类型转换时对象会发生变化（对象改变）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vechicle v;</span><br><span class="line"><span class="type">Car</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Car</span>();<span class="comment">//car是vechicle的子类</span></span><br><span class="line">v = c;<span class="comment">//right</span></span><br><span class="line">c = v;<span class="comment">//编译错误</span></span><br><span class="line"></span><br><span class="line">c = (Car) v;<span class="comment">//编译没有问题，但运行时需要v实际管理的是car类型变量，否则会报造型异常错误</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>多态：</strong></p>
+<ul>
+<li><p>声明类型与动态类型：</p>
+</li>
+<li><p>函数调用的绑定：</p>
+<ul>
+<li><p>当通过对象变量调用函数的时候，调用那个函数这件事叫做绑定（&#x3D;&#x3D;java函数默认动态调用&#x3D;&#x3D;）</p>
+<ul>
+<li>静态绑定：根据变量的声明类型来决定（编译时绑定）</li>
+<li>动态绑定：根绝变量的动态类型来决定（运行过程中绑定）</li>
+</ul>
+</li>
+<li><p>成员函数中调用其他成员函数也是通过this这个对象变量来调用</p>
+</li>
+</ul>
+</li>
+<li><p>覆盖override：</p>
+<ul>
+<li>子类he父类中存在名称和参数表完全相同的函数，这一对函数构成覆盖关系</li>
+<li>通过父类的变量调用存在覆盖关系的函数，会调用变量当时所管理的对象所属的类的函数（动态绑定）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4-Object类"><a href="#4-4-Object类" class="headerlink" title="4.4 Object类"></a>4.4 Object类</h3><p>&#x3D;&#x3D;所有的类都是继承自Object的&#x3D;&#x3D;</p>
+<ul>
+<li><p>DoME的新媒体类型</p>
+<p>（例子）</p>
+</li>
+</ul>
+<p><img src="/%5Cimage-20210922110156019.png" alt="image-20210922110156019"></p>
+<h1 id="5-代码升级"><a href="#5-代码升级" class="headerlink" title="5. 代码升级"></a>5. 代码升级</h1><ul>
+<li>减少复制代码</li>
+<li>降低类间的耦合<ul>
+<li>用封装，留接口</li>
+<li>用接口来实现聚合</li>
+<li>用容器来实现灵活</li>
+<li>以框架加数据提高可扩展性<ul>
+<li>定义Handler处理命令</li>
+<li>用Hash表来保存命令和Handler之间的关系</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Handler</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>Java学习--1--面向对象</p><p><a href="http://example.com/2021/10/06/Java_1_继续入门/">http://example.com/2021/10/06/Java_1_继续入门/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>John Doe</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2021-10-06</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-05</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Java/">Java</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/10/08/Java_1_%E5%AE%B9%E5%99%A8%E4%BE%8B%E7%A8%8B_%E5%9F%8E%E5%B8%82%E9%87%8C%E7%A8%8B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Java学习--1--容器例程-城市里程</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/10/01/Java_0_%E5%85%A5%E9%97%A8/"><span class="level-item">Java学习笔记-0-入门</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/head.jpg" alt="小明"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">小明</p><p class="is-size-6 is-block">认真写代码！</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>北京</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Xiaoming4249" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Xiaoming4249"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-04T08:53:56.000Z">2022-03-04</time></p><p class="title"><a href="/2022/03/04/Linux-Hexo-yilia%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Linux+Hexo+yilia主题--个人博客搭建</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-19T16:00:00.000Z">2021-10-20</time></p><p class="title"><a href="/2021/10/20/koa/">Koa基础学习笔记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-07T16:00:00.000Z">2021-10-08</time></p><p class="title"><a href="/2021/10/08/Java_1_%E5%AE%B9%E5%99%A8%E4%BE%8B%E7%A8%8B_%E5%9F%8E%E5%B8%82%E9%87%8C%E7%A8%8B/">Java学习--1--容器例程-城市里程</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-05T16:00:00.000Z">2021-10-06</time></p><p class="title"><a href="/2021/10/06/Java_1_%E7%BB%A7%E7%BB%AD%E5%85%A5%E9%97%A8/">Java学习--1--面向对象</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-30T16:00:00.000Z">2021-10-01</time></p><p class="title"><a href="/2021/10/01/Java_0_%E5%85%A5%E9%97%A8/">Java学习笔记-0-入门</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">October 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/1900/01/"><span class="level-start"><span class="level-item">January 1900</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Koa/"><span class="tag">Koa</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/muban/"><span class="tag">muban</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
